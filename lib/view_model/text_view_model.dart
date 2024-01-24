@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -89,6 +91,14 @@ class TextViewModel with ChangeNotifier {
   void shareText() {
     Share.share(scannedText);
     notifyListeners();
+  }
+  String editText() {
+    // Share.share(scannedText);
+    notifyListeners();
+    print(scannedText);
+    log('message');
+    log(scannedText);
+    return scannedText;
   }
 
   void copyText() {
